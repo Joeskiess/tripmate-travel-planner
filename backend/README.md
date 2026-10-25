@@ -110,7 +110,7 @@ public class SecurityConfig {
 
 ## 🐘 Database Configuration (`application.properties`)
 
-File: [`Backend/src/main/resources/application.properties`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/travel_itinerary_backend/Travel%20Itinerary%20app%20-%20Copy/Backend/src/main/resources/application.properties)
+File: [`src/main/resources/application.properties`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/backend/src/main/resources/application.properties)
 
 ```properties
 spring.application.name=itinerary
@@ -141,7 +141,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 ### Compile and Start Backend
 ```powershell
 # Navigate to the backend directory
-cd "c:\Users\Joe\Projects\Trip Planner Wanderlog\travel_itinerary_backend\Travel Itinerary app - Copy\Backend"
+cd backend
 
 # Compile and run via Spring Boot Maven plugin
 mvn clean spring-boot:run

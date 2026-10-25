@@ -178,21 +178,20 @@ Trip Planner Wanderlog/
 │       ├── destinationsData.js         # 50+ Global Cities, Authentic Registries (Singapore, Rome, Tokyo...)
 │       └── tripData.js                 # Initial Swiss Escape Seed Itinerary
 │
-└── travel_itinerary_backend/           # Enterprise Spring Boot + PostgreSQL Architecture
-    ├── README.md                       # Backend Architecture & REST API Guide
-    └── Travel Itinerary app - Copy/
-        └── Backend/                    # Spring Boot 3.2 Maven Java Project
-            ├── pom.xml                 # Maven Dependencies (Spring Data JPA, PostgreSQL, Web)
-            └── src/main/
-                ├── java/com/travel/itinerary/
-                │   ├── TravelItineraryApplication.java  # Main Spring Boot Application Runner
-                │   ├── config/SecurityConfig.java       # CORS & Security Configuration
-                │   ├── controller/TripController.java   # /api/trips CRUD Endpoints
-                │   ├── controller/WeatherController.java# /api/weather OpenWeather Proxy
-                │   ├── model/Trip.java, Activity.java   # JPA Relational Entities
-                │   ├── repository/TripRepository.java   # Spring Data JPA Repository
-                │   └── service/TripService.java         # Cascade Business Logic
-                └── resources/application.properties     # Database Connection & Port Config
+├── backend/                            # Enterprise Spring Boot 3.2 + PostgreSQL REST Backend
+│   ├── README.md                       # Backend Architecture & REST API Specification
+│   ├── pom.xml                         # Maven Dependencies (Spring Data JPA, PostgreSQL Driver, Web)
+│   └── src/main/
+│       ├── java/com/travel/itinerary/
+│       │   ├── TravelItineraryApplication.java  # Main Spring Boot Application Runner
+│       │   ├── config/SecurityConfig.java       # CORS & Security Configuration
+│       │   ├── controller/TripController.java   # /api/trips CRUD Endpoints
+│       │   ├── controller/WeatherController.java# /api/weather OpenWeather Proxy
+│       │   ├── model/Trip.java, Activity.java   # JPA Relational Entities
+│       │   ├── repository/TripRepository.java   # Spring Data JPA Repository
+│       │   └── service/TripService.java         # Cascade Business Logic
+│       └── resources/application.properties     # Database Connection & Port Config
+└── vite.config.js                      # Vite 8 Build Configuration
 ```
 
 ---
@@ -210,7 +209,7 @@ Trip Planner Wanderlog/
 
 ```powershell
 # 1. Clone repository or extract project folder
-cd "c:\Users\Joe\Projects\Trip Planner Wanderlog"
+cd "Trip Planner Wanderlog"
 
 # 2. Install dependencies
 npm install
@@ -225,11 +224,11 @@ The application will be live at **`http://localhost:5173/`** (or `http://localho
 
 ### 2. Spring Boot Backend Setup (Optional)
 
-If you wish to run the local PostgreSQL database server:
+If you wish to run the local Java Spring Boot backend:
 
 ```powershell
-# 1. Navigate to the Maven backend folder
-cd "travel_itinerary_backend\Travel Itinerary app - Copy\Backend"
+# 1. Navigate to the backend folder
+cd backend
 
 # 2. Compile and run Spring Boot
 mvn clean spring-boot:run
@@ -246,7 +245,7 @@ The Spring Boot REST API will be active on **`http://localhost:8080/`**.
    ```sql
    CREATE DATABASE travel_itinerary;
    ```
-3. Credentials can be adjusted in [`application.properties`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/travel_itinerary_backend/Travel%20Itinerary%20app%20-%20Copy/Backend/src/main/resources/application.properties):
+3. Credentials can be adjusted in [`backend/src/main/resources/application.properties`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/backend/src/main/resources/application.properties):
    ```properties
    spring.datasource.url=jdbc:postgresql://localhost:5432/travel_itinerary
    spring.datasource.username=postgres
