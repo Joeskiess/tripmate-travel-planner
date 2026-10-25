@@ -8,19 +8,19 @@ This directory contains client-side API clients, data access layers, authentic l
 
 | Service File | Domain | Responsibility |
 | :--- | :--- | :--- |
-| **[`backendApi.js`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/services/backendApi.js)** | Spring Boot & PostgreSQL Communication | Full REST client managing trip CRUD, activity cascades, live weather proxy, and resilient offline fallback simulation. |
-| **[`placesApiService.js`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/services/placesApiService.js)** | Authentic Places & Imagery API | Real-time Wikimedia & Wikipedia Open APIs, OpenStreetMap Nominatim universal geocoding, strict Haversine $\le 50\text{ km}$ radius validation, and localized itinerary generation for any global destination. |
-| **[`quantumRouteOptimizer.js`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/services/quantumRouteOptimizer.js)** | Algorithmic Optimization | Geometric distance matrix analysis, Euclidean / Haversine distance computations, and zero-backtracking waypoint sequencing. |
+| **[`backendApi.js`](./src/services/backendApi.js)** | Spring Boot & PostgreSQL Communication | Full REST client managing trip CRUD, activity cascades, live weather proxy, and resilient offline fallback simulation. |
+| **[`placesApiService.js`](./src/services/placesApiService.js)** | Authentic Places & Imagery API | Real-time Wikimedia & Wikipedia Open APIs, OpenStreetMap Nominatim universal geocoding, strict Haversine $\le 50\text{ km}$ radius validation, and localized itinerary generation for any global destination. |
+| **[`quantumRouteOptimizer.js`](./src/services/quantumRouteOptimizer.js)** | Algorithmic Optimization | Geometric distance matrix analysis, Euclidean / Haversine distance computations, and zero-backtracking waypoint sequencing. |
 
 ---
 
-## 🌍 1. `placesApiService.js` ([Link](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/services/placesApiService.js))
+## 🌍 1. `placesApiService.js` ([Link](./src/services/placesApiService.js))
 
 A production-grade authentic places discovery service that works for **any travel location on Earth**.
 
 ### Key Capabilities
 1. **Universal Multi-Tier Geocoding**:
-   - **Tier 1:** Instant 0ms lookup against [`GLOBAL_CITY_COORDINATES`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/data/destinationsData.js) (50+ top global destinations).
+   - **Tier 1:** Instant 0ms lookup against [`GLOBAL_CITY_COORDINATES`](./src/data/destinationsData.js) (50+ top global destinations).
    - **Tier 2:** Universal OpenStreetMap Nominatim API (`https://nominatim.openstreetmap.org/search`) resolving exact GPS coordinates for any city, municipality, national park, or island.
    - **Tier 3:** Wikipedia query with `&redirects=1` to follow aliases and retrieve authentic editorial extracts and high-resolution thumbnail images.
 2. **Strict Great-Circle Haversine $\le 50\text{ km}$ Radius Constraint**:
@@ -36,7 +36,7 @@ A production-grade authentic places discovery service that works for **any trave
 
 ---
 
-## 📡 2. `backendApi.js` ([Link](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/services/backendApi.js))
+## 📡 2. `backendApi.js` ([Link](./src/services/backendApi.js))
 
 Connects the React client (`localhost:5173`) to the Spring Boot REST endpoints (`localhost:8080/api/`):
 
@@ -65,7 +65,7 @@ If the Spring Boot backend or PostgreSQL server is offline or unreachable, `back
 
 ---
 
-## ⚡ 3. `quantumRouteOptimizer.js` ([Link](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/services/quantumRouteOptimizer.js))
+## ⚡ 3. `quantumRouteOptimizer.js` ([Link](./src/services/quantumRouteOptimizer.js))
 
 An algorithmic engine designed to solve the Traveling Salesperson Problem (TSP) for daily travel stops:
 

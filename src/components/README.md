@@ -26,7 +26,7 @@ This directory houses the modular, reusable React UI components that power the T
 ## 🔍 In-Depth Component Specifications
 
 ### 1. `TripMap.jsx`
-- **Location**: [`src/components/TripMap.jsx`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/components/TripMap.jsx)
+- **Location**: [`src/components/TripMap.jsx`](./src/components/TripMap.jsx)
 - **Features**:
   - Automatically calculates geographic bounding box (`map.fitBounds`) based on the active day's coordinates.
   - Custom SVG map markers with category colors (Green for Sightseeing, Amber for Dining, Blue for Transit).
@@ -34,7 +34,7 @@ This directory houses the modular, reusable React UI components that power the T
   - Interactive popup anchors with place titles, thumbnail images, and navigation buttons.
 
 ### 2. `JourneyNodeGraph.jsx`
-- **Location**: [`src/components/JourneyNodeGraph.jsx`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/components/JourneyNodeGraph.jsx)
+- **Location**: [`src/components/JourneyNodeGraph.jsx`](./src/components/JourneyNodeGraph.jsx)
 - **Features**:
   - **Multi-Day Topological Flow**: Connects all itinerary days in an interactive node-and-edge matrix.
   - **Dynamic Transit Conduits**: Computes Haversine geodesic distance between consecutive stops and estimates real transit modes (walking, driving, metro) with duration badges.
@@ -45,7 +45,7 @@ This directory houses the modular, reusable React UI components that power the T
   - **Slide-Over Node Inspector**: Deep-dive sheet with cover imagery, address, AI sequence advisory, and one-click map transitions.
 
 ### 2. `BudgetTracker.jsx`
-- **Location**: [`src/components/BudgetTracker.jsx`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/components/BudgetTracker.jsx)
+- **Location**: [`src/components/BudgetTracker.jsx`](./src/components/BudgetTracker.jsx)
 - **Features**:
   - Displays total trip cost against a customizable budget threshold.
   - Progress bar dynamically transitions to warning colors if spending exceeds 90% of budget.
@@ -53,14 +53,14 @@ This directory houses the modular, reusable React UI components that power the T
   - Categorized cost breakdown table with one-click deletion and filtering.
 
 ### 3. `PackingChecklist.jsx`
-- **Location**: [`src/components/PackingChecklist.jsx`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/components/PackingChecklist.jsx)
+- **Location**: [`src/components/PackingChecklist.jsx`](./src/components/PackingChecklist.jsx)
 - **Features**:
   - Categorized checklists: *Documents & Money*, *Clothing & Wear*, *Electronics & Tech*, *Toiletries*, *Outdoor Gear*.
   - Live progress meter tracking percentage of packed items.
   - Custom item input with immediate local state persistence.
 
 ### 4. `RouteOptimizerModal.jsx`
-- **Location**: [`src/components/RouteOptimizerModal.jsx`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/src/components/RouteOptimizerModal.jsx)
+- **Location**: [`src/components/RouteOptimizerModal.jsx`](./src/components/RouteOptimizerModal.jsx)
 - **Features**:
   - Displays side-by-side comparison: *Original Route* vs. *Optimized Route*.
   - Highlights calculated distance delta (`-64.6 km saved`) and transit duration reduction (`36% less driving`).

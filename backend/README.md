@@ -1,6 +1,6 @@
 # TripMate Spring Boot & PostgreSQL Backend Architecture
 
-This directory contains the Spring Boot 3.2 backend, JPA relational models, Spring Security configuration, and PostgreSQL database setup for **TripMate** (derived from [`travel_itinerary.zip`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/travel_itinerary.zip)).
+This directory contains the Spring Boot 3.2 backend, JPA relational models, Spring Security configuration, and PostgreSQL database setup for **TripMate** ).
 
 ---
 
@@ -74,7 +74,7 @@ Base URL: `http://localhost:8080/api`
 
 ## 🔒 Security & CORS Configuration
 
-Defined in [`SecurityConfig.java`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/travel_itinerary_backend/Travel%20Itinerary%20app%20-%20Copy/Backend/src/main/java/com/travel/itinerary/config/SecurityConfig.java):
+Defined in [`SecurityConfig.java`](./backend/Travel%20Itinerary%20app%20-%20Copy/Backend/src/main/java/com/travel/itinerary/config/SecurityConfig.java):
 
 ```java
 @Configuration
@@ -110,7 +110,7 @@ public class SecurityConfig {
 
 ## 🐘 Database Configuration (`application.properties`)
 
-File: [`src/main/resources/application.properties`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/backend/src/main/resources/application.properties)
+File: [`src/main/resources/application.properties`](./backend/src/main/resources/application.properties)
 
 ```properties
 spring.application.name=itinerary

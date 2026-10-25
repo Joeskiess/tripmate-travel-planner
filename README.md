@@ -208,8 +208,9 @@ Trip Planner Wanderlog/
 ### 1. Frontend Client Setup (React 19 + Vite)
 
 ```powershell
-# 1. Clone repository or extract project folder
-cd "Trip Planner Wanderlog"
+# 1. Clone repository and navigate to folder
+git clone https://github.com/Joeskiess/tripmate-travel-planner.git
+cd tripmate-travel-planner
 
 # 2. Install dependencies
 npm install
@@ -245,7 +246,7 @@ The Spring Boot REST API will be active on **`http://localhost:8080/`**.
    ```sql
    CREATE DATABASE travel_itinerary;
    ```
-3. Credentials can be adjusted in [`backend/src/main/resources/application.properties`](file:///c:/Users/Joe/Projects/Trip%20Planner%20Wanderlog/backend/src/main/resources/application.properties):
+3. Credentials can be adjusted in [`backend/src/main/resources/application.properties`](./backend/src/main/resources/application.properties):
    ```properties
    spring.datasource.url=jdbc:postgresql://localhost:5432/travel_itinerary
    spring.datasource.username=postgres
