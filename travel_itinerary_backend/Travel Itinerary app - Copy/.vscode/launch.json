@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TravelItineraryApplication<itinerary>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.travel.itinerary.TravelItineraryApplication",
+            "projectName": "itinerary",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

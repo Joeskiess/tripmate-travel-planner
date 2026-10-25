@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tm-blue: #2563EB;
+  --color-tm-blue-hover: #1D4ED8;
+  --color-tm-blue-light: #EFF6FF;
+  --color-tm-indigo: #4F46E5;
+  --color-tm-indigo-light: #EEF2FF;
+  --color-tm-slate: #0F172A;
+  --color-tm-emerald: #10B981;
+  --color-tm-rose: #F43F5E;
+  --color-tm-forest: #124C40;
+  --color-tm-sage: #DCEBE3;
+  --color-tm-ivory: #F7F5EF;
+  --color-tm-charcoal: #17211F;
+}
+
+.font-editorial-serif {
+  font-family: 'Newsreader', 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+}
+
+/* TripMate Modern Luxury Design Tokens (Pro Max UI/UX) */
+:root {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #0F172A;
+  background-color: #F8FAFC;
+  --brand-primary: #2563EB;
+  --brand-hover: #1D4ED8;
+  --brand-indigo: #4F46E5;
+  --brand-slate: #0F172A;
+  --brand-emerald: #10B981;
+  --brand-rose: #F43F5E;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+/* Custom modern scrollbars in sleek Slate & Blue */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+::selection {
+  background-color: rgba(37, 99, 235, 0.15);
+  color: #1E40AF;
+}
+
+/* Custom TripMate Leaflet Pin Badges (Apple Maps / Google Maps Pro style) */
+.tripmate-marker-container {
+  background: transparent !important;
+  border: none !important;
+}
+
+.custom-tripmate-pin {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.custom-tripmate-pin:hover,
+.custom-tripmate-pin.selected {
+  transform: scale(1.25);
+  z-index: 1000 !important;
+}
+
+.pin-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--pin-color, #2563EB);
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.custom-tripmate-pin.selected .pin-badge {
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.35), 0 4px 18px rgba(15, 23, 42, 0.35);
+}
+
+.pin-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--pin-color, #2563EB);
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+}
+
+.custom-tripmate-pin.selected .pin-pulse {
+  animation: tripmate-ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes tripmate-ping {
+  0% { transform: scale(1); opacity: 0.75; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* Leaflet Popup Styling */
+.tripmate-leaflet-popup .leaflet-popup-content-wrapper {
+  padding: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px -5px rgba(15, 23, 42, 0.18), 0 10px 15px -6px rgba(15, 23, 42, 0.08);
+  border: 1px solid #E2E8F0;
+  background: #FFFFFF;
+}
+
+.tripmate-leaflet-popup .leaflet-popup-content {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.map-popup-card {
+  width: 250px;
+}
+
+.popup-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.popup-info {
+  padding: 14px;
+}
+
+.popup-category {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #2563EB;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.popup-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 4px 0;
+}
+
+.popup-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.popup-rating {
+  font-weight: 700;
+  color: #D97706;
+}
+
+.popup-price {
+  color: #64748B;
+  font-weight: 600;
+}
+
+.popup-tip {
+  font-size: 11px;
+  color: #475569;
+  background-color: #F1F5F9;
+  padding: 5px 8px;
+  border-radius: 8px;
+  margin: 6px 0 0 0;
+}
+
+/* Clean Print & Export PDF Styling for TripMate */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
